@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: monospace;
+            font-weight: bold;
+            text-align: center;
+            user-select: none;
+        }
+        pre {
+            font-size: 14px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .mensaje {
+            font-size: 18px;
+            padding: 10px;
+            border: 2px solid black;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <pre>
+      (O)        (O)     
+     /   \______/   \    
+    /                \   
+   |  /------------\  |  
+   | |  \________/  | |  
+   |  \____________/  |  
+    \________________/   
+    </pre>
+
+    <div class="mensaje">!!! AYUDA BRO ME CONVIRTIERON EN RIBBIT !!!</div>
+
+    <script>
+        const colores = ['#FF0000', '#00FF00', '#FFFF00', '#0000FF', '#FF00FF', '#00FFFF', '#FFA500'];
+        
+        setInterval(() => {
+            const bg = colores[Math.floor(Math.random() * colores.length)];
+            let fg = colores[Math.floor(Math.random() * colores.length)];
+            while (fg === bg) {
+                fg = colores[Math.floor(Math.random() * colores.length)];
+            }
+            document.body.style.backgroundColor = bg;
+            document.body.style.color = fg;
+        }, 150);
+    </script>
+</body>
+</html>
